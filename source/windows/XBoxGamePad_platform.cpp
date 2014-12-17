@@ -88,7 +88,7 @@ double XBoxPadYAxisL_platform(int controller)
 {
     if(!_isConnected[controller])
         return 0;
-    int thumb = _controllerState[controller].Gamepad.sThumbLX;
+    int thumb = _controllerState[controller].Gamepad.sThumbLY;
     if(abs(thumb) < XINPUT_GAMEPAD_LEFT_THUMB_DEADZONE)
         return 0;
     double normalized = thumb/32768.0;
